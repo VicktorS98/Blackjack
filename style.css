@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  background-image: url(images/table.png);
+  background-size: cover;
+  font-family: 'Roboto Mono', monospace;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+button, input {
+  font-family: inherit;
+}
+
+.money {
+  font-size: 1.5rem;
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  right: 0;
+  background-color: goldenrod;
+  border-bottom-left-radius: 20%;
+}
+
+.container {
+  width: 60%;
+  margin-inline: auto;
+  position: relative;
+  top: 150px;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: goldenrod;
+}
+
+.rules {
+  font-size: 1.15rem;
+  color: white;
+  width: 80vw;
+  margin: 1rem calc(-30vw + 35%);
+}
+
+.card-p, .sum, .blackjack {
+  line-height: 1.7;
+  margin: 10px 0;
+  color: white;
+  font-size: 1.3rem;
+}
+
+button {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  margin-top: 0.8rem;
+  background-color: goldenrod;
+  border: 0;
+  border-radius: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.youWon {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  position: relative;
+  top: 200px;
+}
