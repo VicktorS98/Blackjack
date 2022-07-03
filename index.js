@@ -15,6 +15,8 @@ var sumStored = 0;
 
 startGame.addEventListener("click", function () {
     if (start == true) {
+        storedNumbers= [];
+        cardText.innerText = "Cards: ";
         money = money - 5;
         moneyHTML.innerText = "$" + money;
     }
@@ -32,9 +34,11 @@ startGame.addEventListener("click", function () {
     sum.append("Sum: " + sumStored);
 
     if (sumStored > 21) {
-        reset();
-        startGame.innerText = "Play Again";
-        message.innerText = "You went over 21. Click to Start Over";
+      stopButton.classList.add("hidden");
+      startGame.innerText = "Play Again";
+      start = true;
+      startGame.innerText = "Play Again";
+      message.innerText = "You went over 21. Click to Start Over";
     }
 });
 
@@ -77,4 +81,5 @@ function reset() {
     start = true;
     cardText.classList.add("hidden");
 }
+
 
