@@ -7,6 +7,7 @@ const stopButton = document.querySelector(".stop");
 const message = document.querySelector(".message");
 const rules = document.querySelector(".rules");
 const youWon = document.querySelector(".youWon");
+const blackjack = document.querySelector(".blackjack");
 
 var money = 100;
 var start = true;
@@ -19,6 +20,7 @@ startGame.addEventListener("click", function () {
         cardText.innerText = "Cards: ";
         money = money - 5;
         moneyHTML.innerText = "$" + money;
+        blackjack.classList.add("hidden");
     }
     start = false;
     rules.classList.add("hidden");
@@ -39,6 +41,16 @@ startGame.addEventListener("click", function () {
       start = true;
       startGame.innerText = "Play Again";
       message.innerText = "You went over 21. Click to Start Over";
+    } else if (sumStored == 21) {
+      money += 100;
+      moneyHTML.innerText = "$" + money;
+      stopButton.classList.add("hidden");
+      startGame.innerText = "Play Again";
+      start = true;
+      blackjack.classList.remove("hidden");
+      setTimeout(function() {
+        checkMoney();
+      }, 3000)
     }
 });
 
@@ -61,9 +73,6 @@ stopButton.addEventListener("click", function () {
         console.log("chau");
         money += 20;
         reset();
-    } else if (sumStored == 21) {
-        money += 100;
-        reset();
     }
 
     checkMoney();
@@ -81,5 +90,4 @@ function reset() {
     start = true;
     cardText.classList.add("hidden");
 }
-
 
