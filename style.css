@@ -43,7 +43,7 @@ h1 {
   margin: 1rem calc(-30vw + 35%);
 }
 
-.card-p, .sum {
+.card-p, .sum, .blackjack {
   line-height: 1.7;
   margin: 10px 0;
   color: white;
